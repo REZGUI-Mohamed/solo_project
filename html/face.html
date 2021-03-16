@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/animate.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+  height: -webkit-fill-available;
+}
+
+.full-page{
+  display:flex; 
+  width:100vw;
+  height:100vh;
+  min-height:-webkit-fill-available;
+  background-color:#444; 
+}
+
+.text{
+  display:block;
+  margin:auto; 
+  font-size:7vw;
+  line-height:1;
+  font-family:monospace; 
+  font-weight:bold;
+  
+    background-image: linear-gradient(var(--deg), #e66465, #9198e5);
+    background-image: url("data:image/svg+xml,<svg width='150px' height='150px' xmlns='http://www.w3.org/2000/svg'><text x='0' y='130px' font-size='130px' clip-path='url(%23emojiClipPath)'>👻</text></svg>");
+  
+  background-repeat:no-repeat;
+  background-size:contain;
+  
+  animation: bg 6s infinite alternate;
+}
+
+
+@keyframes bg{
+  0%{background-position-x:-20%;}
+  100%{background-position-x:115%;}
+}
+
+
+
+
+html{font-family:arial;}
+input{
+  position:fixed; top:18px; left:15px; z-index:11;
+  display:block; padding:5px; border:solid 1px rgb(136 136 136 / 0.7); border-radius:4px;
+  background-color:rgb(255 221 64 / 0.8);
+  margin-right:5px;
+}
+
+
+:checked ~.full-page .text{
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:rgb(0,0,0,0.3);
+}
+    </style>
+</head>
+<body>
+  <a class="btn btn-primary" href="./Login.html">Sign In</a>
+    <input style="display:none" type="checkbox" id="trim" checked><label for="trim"></label>
+
+
+<div class="full-page">
+  
+  <span class="text">enjoy your car <3</span>
+
+</div>
+
+    
+</body>
+</html>
